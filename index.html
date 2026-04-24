@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vantage × Novartis Egypt — PR Strategy 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d5a1b;
+    --green-light: #4a7c2f;
+    --blue: #1a3a6b;
+    --blue-light: #2a5298;
+    --dark: #0d0d0d;
+    --cream: #f5f2ec;
+    --white: #ffffff;
+    --gold: #c9a84c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+  }
+
+  .hero-right {
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+  }
+
+  .brand-label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 6px;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  .hero-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+  }
+
+  .x-mark {
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--dark);
+    margin: 0 auto 40px;
+    box-shadow: 0 0 0 8px rgba(255,255,255,0.15);
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(255,255,255,0.15); }
+    50% { box-shadow: 0 0 0 16px rgba(255,255,255,0.05); }
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--white);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  .hero-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #080808;
+    padding: 14px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hero-footer span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.45;
+    text-transform: uppercase;
+  }
+
+  /* ── AGENDA ── */
+  .agenda {
+    background: var(--cream);
+    color: var(--dark);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+  }
+
+  .agenda-sidebar {
+    background: var(--blue);
+    color: var(--white);
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .agenda-sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 24px;
+    margin-top: 16px;
+  }
+
+  .agenda-items {
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .agenda-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: start;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    gap: 20px;
+  }
+
+  .agenda-item:first-child { border-top: 1px solid rgba(0,0,0,0.1); }
+
+  .agenda-num {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+
+  .agenda-num.green { background: var(--green); color: var(--white); }
+  .agenda-num.blue { background: var(--blue); color: var(--white); }
+
+  .agenda-text h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+
+  .agenda-text p {
+    font-size: 13px;
+    color: #777;
+    font-weight: 400;
+  }
+
+  /* ── SECTION BASE ── */
+  .section {
+    padding: 100px 80px;
+    position: relative;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 60px;
+  }
+
+  /* ── SITUATION ── */
+  .situation {
+    background: var(--blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  .situation-left {
+    background: var(--blue);
+    padding: 100px 70px;
+  }
+
+  .situation-right {
+    background: var(--green);
+    padding: 100px 70px;
+  }
+
+  .situation-right .section-tag { color: rgba(255,255,255,0.55); }
+  .situation-right .section-title { color: var(--white); }
+
+  .context-body p {
+    font-size: 16px;
+    line-height: 1.75;
+    opacity: 0.85;
+    margin-bottom: 28px;
+  }
+
+  .signal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .signal-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  .signal-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .pr-opportunities {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .pr-opp {
+    border-left: 3px solid rgba(255,255,255,0.35);
+    padding-left: 18px;
+  }
+
+  .pr-opp h4 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .pr-opp p {
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 1.6;
+  }
+
+  /* ── KEY MESSAGES ── */
+  .messages {
+    background: #111;
+    padding: 100px 80px;
+  }
+
+  .messages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .msg-card {
+    padding: 50px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .msg-card:nth-child(1) { background: #1a2e4a; }
+  .msg-card:nth-child(2) { background: var(--green); }
+  .msg-card:nth-child(3) { background: var(--blue); }
+  .msg-card:nth-child(4) { background: var(--green-light); }
+
+  .msg-number {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .msg-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .msg-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+
+  /* ── TARGET AUDIENCE ── */
+  .audience {
+    background: var(--cream);
+    color: var(--dark);
+    padding: 100px 80px;
+  }
+
+  .audience .section-title { color: var(--dark); }
+  .audience .section-tag { color: var(--green); }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .aud-card {
+    padding: 50px 44px;
+    position: relative;
+  }
+
+  .aud-card:nth-child(odd) { background: #d8e8c8; }
+  .aud-card:nth-child(even) { background: #c8d8e8; }
+
+  .aud-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.08);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .aud-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    color: var(--blue);
+  }
+
+  .aud-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  /* ── MEDIA TACTICS ── */
+  .tactics {
+    background: var(--dark);
+    padding: 100px 80px;
+  }
+
+  .tactics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .tactic-card {
+    padding: 40px 32px;
+    background: #161616;
+    border-top: 3px solid;
+    transition: transform 0.25s ease;
+  }
+
+  .tactic-card:nth-child(1) { border-color: var(--blue-light); }
+  .tactic-card:nth-child(2) { border-color: var(--green); }
+  .tactic-card:nth-child(3) { border-color: var(--blue-light); }
+  .tactic-card:nth-child(4) { border-color: var(--green); }
+
+  .tactic-card:hover { transform: translateY(-4px); }
+
+  .tactic-type {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .tactic-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  .tactic-outlets {
+    margin-bottom: 20px;
+  }
+
+  .tactic-outlets-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .tactic-outlets p {
+    font-size: 13px;
+    opacity: 0.65;
+    line-height: 1.6;
+  }
+
+  .tactic-tactics-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .tactic-card > p {
+    font-size: 13px;
+    opacity: 0.65;
+    line-height: 1.6;
+  }
+
+  /* ── PRESS RELEASE ── */
+  .press {
+    background: var(--green);
+    padding: 100px 80px;
+  }
+
+  .press-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .release-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+  }
+
+  .release-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 56px 60px;
+    margin-top: 48px;
+  }
+
+  .release-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .release-box p {
+    font-size: 15px;
+    line-height: 1.85;
+    opacity: 0.82;
+    margin-bottom: 20px;
+  }
+
+  .release-box p:last-child { margin-bottom: 0; }
+
+  .release-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .meta-pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.75;
+  }
+
+  /* ── QUOTES ── */
+  .quotes {
+    background: var(--blue);
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+
+  .quote-block {
+    padding: 60px 56px;
+  }
+
+  .quote-block:first-child { background: rgba(255,255,255,0.04); }
+  .quote-block:last-child { background: var(--green); }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 0.6;
+    opacity: 0.25;
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+
+  .quote-attr {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+  }
+
+  .quote-name {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+    margin-bottom: 3px;
+  }
+
+  .quote-title {
+    font-size: 12px;
+    opacity: 0.55;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── PERSONAL PITCH ── */
+  .pitch {
+    background: #050505;
+    padding: 100px 80px;
+  }
+
+  .pitch-inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .pitch-label-block {
+    position: sticky;
+    top: 80px;
+  }
+
+  .pitch-label-block .section-tag { color: var(--gold); }
+
+  .pitch-label-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 8px;
+  }
+
+  .pitch-content h4 {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  .pitch-content p {
+    font-size: 17px;
+    line-height: 1.85;
+    opacity: 0.78;
+    margin-bottom: 20px;
+  }
+
+  /* ── FOOTER / CLOSING ── */
+  .closing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
+  }
+
+  .close-left {
+    background: var(--green);
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .close-right {
+    background: var(--blue);
+    padding: 80px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .close-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.05;
+  }
+
+  .close-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 24px;
+  }
+
+  .close-contacts a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .close-contacts a:hover { color: var(--white); }
+
+  .close-contacts span {
+    font-size: 14px;
+    opacity: 0.55;
+  }
+
+  .footer-bar {
+    background: #080808;
+    padding: 16px 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-bar span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.35;
+    text-transform: uppercase;
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero, .situation, .messages-grid, .audience-grid,
+    .quotes, .closing, .agenda { grid-template-columns: 1fr; }
+
+    .tactics-grid { grid-template-columns: 1fr 1fr; }
+
+    .section, .messages, .tactics, .press, .pitch, .audience { padding: 70px 36px; }
+
+    .agenda-sidebar { padding: 60px 36px; }
+    .agenda-items { padding: 60px 36px; }
+
+    .pitch-inner { grid-template-columns: 1fr; gap: 36px; }
+    .pitch-label-block { position: static; }
+
+    .release-box { padding: 36px 30px; }
+
+    .quote-block { padding: 48px 36px; }
+
+    .close-left, .close-right { padding: 60px 36px; }
+    .footer-bar { padding: 16px 36px; }
+
+    .hero-footer { padding: 14px 36px; }
+    .hero-title { font-size: 40px; white-space: normal; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="brand-label">Vantage</div>
+    <div class="brand-sub">Communications</div>
+  </div>
+  <div class="hero-right" style="align-items:flex-end; text-align:right;">
+    <div class="brand-label">Novartis</div>
+    <div class="brand-sub">Egypt</div>
+  </div>
+
+  <div class="hero-center">
+    <div class="x-mark">×</div>
+    <h1 class="hero-title">PR STRATEGY</h1>
+    <p class="hero-subtitle">Vantage × Novartis Egypt &nbsp;—&nbsp; Manufacturing Expansion Campaign</p>
+  </div>
+
+  <div class="hero-footer">
+    <span>Prepared by Doha El Bakry &nbsp;|&nbsp; 2026</span>
+  </div>
+</section>
+
+<!-- ══ AGENDA ══ -->
+<section class="agenda">
+  <div class="agenda-sidebar">
+    <div class="sidebar-label">Contents</div>
+    <h2>Vantage × Novartis<br>PR Strategy 2026</h2>
+  </div>
+  <div class="agenda-items">
+    <div class="agenda-item fade-up">
+      <div class="agenda-num green">01</div>
+      <div class="agenda-text">
+        <h3>Situation Overview</h3>
+        <p>Manufacturing expansion context</p>
+      </div>
+    </div>
+    <div class="agenda-item fade-up">
+      <div class="agenda-num blue">02</div>
+      <div class="agenda-text">
+        <h3>Strategic Comm Plan</h3>
+        <p>Key messages & Target audience & Media tactics</p>
+      </div>
+    </div>
+    <div class="agenda-item fade-up">
+      <div class="agenda-num green">03</div>
+      <div class="agenda-text">
+        <h3>Target Media Outlets</h3>
+        <p>Print, online, broadcast & digital</p>
+      </div>
+    </div>
+    <div class="agenda-item fade-up">
+      <div class="agenda-num blue">04</div>
+      <div class="agenda-text">
+        <h3>Press Release</h3>
+        <p>350–450 word official announcement</p>
+      </div>
+    </div>
+    <div class="agenda-item fade-up">
+      <div class="agenda-num green">05</div>
+      <div class="agenda-text">
+        <h3>Spokesperson Quotes</h3>
+        <p>Company & Minister of Health</p>
+      </div>
+    </div>
+    <div class="agenda-item fade-up">
+      <div class="agenda-num blue">06</div>
+      <div class="agenda-text">
+        <h3>Personal Pitch</h3>
+        <p>Why I'm the right fit for this role</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SITUATION OVERVIEW ══ -->
+<section class="situation">
+  <div class="situation-left">
+    <span class="section-tag">01 — Situation Overview</span>
+    <h2 class="section-title" style="color:var(--white);">Novartis Egypt:<br>Manufacturing Expansion</h2>
+    <div class="context-body">
+      <p>Novartis Egypt is expanding its manufacturing facility, broadening its production portfolio, marking a landmark investment in Egypt's healthcare and industrial sectors.</p>
+      <p>This expansion signals:</p>
+      <ul class="signal-list">
+        <li>Long-term commitment to Egypt</li>
+        <li>Job creation & economic impact</li>
+        <li>Greater access to innovative medicines</li>
+        <li>Alignment with Egypt Vision 2030</li>
+        <li>Strengthened local supply chain</li>
+      </ul>
+    </div>
+  </div>
+  <div class="situation-right">
+    <span class="section-tag">The PR Opportunity</span>
+    <h2 class="section-title">Four Strategic Goals</h2>
+    <div class="pr-opportunities">
+      <div class="pr-opp">
+        <h4>Credibility Boost</h4>
+        <p>Frame Novartis as Egypt's most committed global pharma investor</p>
+      </div>
+      <div class="pr-opp">
+        <h4>Government Relations</h4>
+        <p>Strengthen ties with MoH, MoI & industrial ministries</p>
+      </div>
+      <div class="pr-opp">
+        <h4>Public Trust</h4>
+        <p>Position the brand as a driver of national health sovereignty</p>
+      </div>
+      <div class="pr-opp">
+        <h4>Media Moment</h4>
+        <p>Turn the expansion into a landmark news story across all channels</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KEY MESSAGES ══ -->
+<section class="messages">
+  <span class="section-tag">02 — Strategic Communication Plan</span>
+  <h2 class="section-title">Key Messages</h2>
+  <div class="messages-grid">
+    <div class="msg-card fade-up">
+      <div class="msg-number">MSG 01</div>
+      <h3>Investing in Egypt's Future</h3>
+      <p>Novartis Egypt's facility expansion is a bold, long-term investment in Egypt's health infrastructure — creating jobs, building local expertise, and fuelling economic growth.</p>
+    </div>
+    <div class="msg-card fade-up">
+      <div class="msg-number">MSG 02</div>
+      <h3>Medicine Made in Egypt</h3>
+      <p>By expanding local manufacturing, Novartis ensures Egyptian patients gain faster, more reliable access to innovative, high-quality medicines, produced right here at home.</p>
+    </div>
+    <div class="msg-card fade-up">
+      <div class="msg-number">MSG 03</div>
+      <h3>A Partner in National Vision</h3>
+      <p>This expansion directly supports Egypt Vision 2030 by advancing the localisation of pharmaceutical manufacturing and reducing dependence on imported medicines.</p>
+    </div>
+    <div class="msg-card fade-up">
+      <div class="msg-number">MSG 04</div>
+      <h3>Science That Serves Communities</h3>
+      <p>Novartis' broader portfolio brings life-changing therapies to more Egyptian patients, reinforcing the company's unwavering commitment to equitable healthcare access.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TARGET AUDIENCE ══ -->
+<section class="audience">
+  <span class="section-tag">03 — Strategic Communication Plan</span>
+  <h2 class="section-title">Target Audience</h2>
+  <div class="audience-grid">
+    <div class="aud-card fade-up">
+      <div class="aud-number">01</div>
+      <h3>Government</h3>
+      <p>Key decision-makers responsible for shaping healthcare policies, approving pharmaceutical operations, and supporting national healthcare initiatives to enhance credibility, facilitate smoother operations, and align the company with Egypt's national healthcare strategy.</p>
+    </div>
+    <div class="aud-card fade-up">
+      <div class="aud-number">02</div>
+      <h3>Healthcare Professionals</h3>
+      <p>Deepen relationships with 500+ healthcare professionals through executive roundtables, medical symposia, and targeted B2B media placements.</p>
+    </div>
+    <div class="aud-card fade-up">
+      <div class="aud-number">03</div>
+      <h3>General Public</h3>
+      <p>Egyptian patients and the broader public who benefit directly from improved access to healthcare and medications. They are the end beneficiaries and their awareness builds trust and positive brand perception.</p>
+    </div>
+    <div class="aud-card fade-up">
+      <div class="aud-number">04</div>
+      <h3>Media & Journalists</h3>
+      <p>Traditional and digital media professionals responsible for covering healthcare, business, and economic developments. They amplify the company's message and shape public perception through credible coverage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MEDIA TACTICS ══ -->
+<section class="tactics">
+  <span class="section-tag">04 — Strategic Communication Plan</span>
+  <h2 class="section-title">Recommended Media Tactics</h2>
+  <div class="tactics-grid">
+    <div class="tactic-card fade-up">
+      <div class="tactic-type">Channel</div>
+      <h3>Print & Online</h3>
+      <div class="tactic-outlets">
+        <div class="tactic-outlets-label">Key Outlets</div>
+        <p>Al-Ahram, Al-Masry Al-Youm, Daily News Egypt, Akhbar El-Youm, Cairo 24, Enterprise, Egypt Today</p>
+      </div>
+      <div class="tactic-tactics-label">Tactics</div>
+      <p>Exclusive feature stories, op-eds by CEO, dedicated health pages, advertorial on expansion milestone</p>
+    </div>
+    <div class="tactic-card fade-up">
+      <div class="tactic-type">Channel</div>
+      <h3>Broadcast TV & Radio</h3>
+      <div class="tactic-outlets">
+        <div class="tactic-outlets-label">Key Outlets</div>
+        <p>CBC, ON TV, Extra News, Nile News, Sada El-Balad, Nogoom FM</p>
+      </div>
+      <div class="tactic-tactics-label">Tactics</div>
+      <p>Morning show segments, CEO interview placements, ministerial joint press conference coverage</p>
+    </div>
+    <div class="tactic-card fade-up">
+      <div class="tactic-type">Channel</div>
+      <h3>Digital Media</h3>
+      <div class="tactic-outlets">
+        <div class="tactic-outlets-label">Key Outlets</div>
+        <p>Masrawy Health, Youm7.com, Dot Masr, Identity Business, Health sections of major portals</p>
+      </div>
+      <div class="tactic-tactics-label">Tactics</div>
+      <p>Press release distribution, sponsored digital content</p>
+    </div>
+    <div class="tactic-card fade-up">
+      <div class="tactic-type">Channel</div>
+      <h3>Social Media</h3>
+      <div class="tactic-outlets">
+        <div class="tactic-outlets-label">Key Outlets</div>
+        <p>Facebook (primary), Instagram, LinkedIn, YouTube, X (Twitter)</p>
+      </div>
+      <div class="tactic-tactics-label">Tactics</div>
+      <p>Campaign hashtag launch, behind-the-scenes facility video, HCP & patient testimonials</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRESS RELEASE ══ -->
+<section class="press">
+  <div class="press-inner">
+    <span class="section-tag">05 — Press Release</span>
+    <h2 class="section-title">Official Announcement Draft</h2>
+
+    <div class="release-box fade-up">
+      <span class="release-label">For Immediate Release</span>
+      <h3>Novartis Egypt Expands Manufacturing Facility,<br>Reinforcing Commitment to Egyptian Healthcare</h3>
+      <p>Novartis Egypt announced the expansion of its local manufacturing facility, marking a significant step in strengthening its presence in the Egyptian healthcare sector. This expansion reflects the company's long-term commitment to supporting Egypt's vision for improving healthcare access and advancing local production capabilities.</p>
+      <p>The expanded facility will enable Novartis to broaden its manufacturing portfolio, ensuring the availability of high-quality and innovative treatments for patients across the country. This move aligns with national efforts to enhance healthcare infrastructure and reduce dependency on imported medicines.</p>
+      <p>Commenting on the expansion, a Novartis Egypt spokesperson said: "We are proud to deepen our investment in Egypt and contribute to the development of the local healthcare ecosystem. This expansion allows us to better serve patients and support the country's healthcare priorities."</p>
+      <p>Egypt's Minister of Health, Dr. Khaled Abdel Ghaffar also highlighted the importance of such investments, stating: "This expansion represents a valuable step towards strengthening Egypt's pharmaceutical manufacturing capabilities and ensuring sustainable access to essential medicines for our citizens."</p>
+      <p>In addition to improving healthcare access, the expansion is expected to create new job opportunities and contribute to the country's economic growth.</p>
+      <p>Novartis Egypt remains committed to innovation, collaboration, and delivering impactful healthcare solutions that improve patients' lives.</p>
+      <div class="release-meta">
+        <span class="meta-pill">Authoritative · Optimistic · Nationally Resonant</span>
+        <span class="meta-pill">Newswire + Direct to Health/Business Editors</span>
+        <span class="meta-pill">Exclusive Interviews Offered to Top 3 Outlets</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPOKESPERSON QUOTES ══ -->
+<section class="quotes">
+  <div class="quote-block fade-up">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">This expansion is far more than a business decision — it is a declaration of our belief in Egypt's potential as a regional healthcare hub. We are proud to deepen our roots in this country, to create meaningful employment for talented Egyptians, and to ensure that patients across the country have access to world-class medicines produced right here at home.</p>
+    <div class="quote-attr">
+      <div class="quote-name">Gehan El Emary</div>
+      <div class="quote-title">Chairperson and Managing Director of Novartis Egypt</div>
+    </div>
+  </div>
+  <div class="quote-block fade-up">
+    <span class="quote-mark">"</span>
+    <p class="quote-text">Novartis Egypt's investment directly advances our national agenda to localise pharmaceutical manufacturing and ensure every Egyptian has access to life-saving medicines. This expansion reinforces Egypt's growing status as a pharmaceutical hub in the region, and we welcome more global companies to invest in our healthcare future.</p>
+    <div class="quote-attr">
+      <div class="quote-name">Khaled Abdel Ghaffar</div>
+      <div class="quote-title">Minister of Health & Population, Arab Republic of Egypt</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PERSONAL PITCH ══ -->
+<section class="pitch">
+  <div class="pitch-inner">
+    <div class="pitch-label-block">
+      <span class="section-tag">07 — Personal Pitch</span>
+      <h2>Why I Am the Right Fit for This Role</h2>
+    </div>
+    <div class="pitch-content fade-up">
+      <h4>Who I Am</h4>
+      <p>Doha El Bakry is a PR Manager with 5 years of experience in PR, media relations, and brand storytelling across Egypt.</p>
+      <p>I bring a proven ability to craft narratives that resonate with media, government stakeholders, and public audiences.</p>
+      <p>I am passionate about the intersection of public health and communications and I believe that powerful storytelling can genuinely improve lives by connecting people to the medicines and services they need.</p>
+      <p>I bring a strong understanding of both creative storytelling and strategic communication, allowing me to build impactful campaigns that align with brand objectives. My experience in handling partnerships and executing campaigns has strengthened my ability to deliver results, manage stakeholders and adapt to different industries.</p>
+      <p>I am eager to bring this combination of creativity and strategic thinking to Vantage Communications and contribute to delivering high-impact communication solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING ══ -->
+<section class="closing">
+  <div class="close-left">
+    <div>
+      <div class="brand-label" style="color:rgba(255,255,255,0.55); margin-bottom:4px;">Vantage Communications</div>
+    </div>
+    <div class="close-headline">Let's build something great together.</div>
+    <div class="close-contacts">
+      <a href="mailto:info@vantagecommunications.com">info@vantagecommunications.com</a>
+      <a href="#">@vantagecommunications</a>
+      <span>Cairo, Egypt | MENA Region</span>
+    </div>
+  </div>
+  <div class="close-right">
+    <div>
+      <div class="brand-label" style="color:rgba(255,255,255,0.55); margin-bottom:4px;">Novartis Egypt</div>
+    </div>
+    <div class="close-headline">Reimagining medicine for every Egyptian.</div>
+    <div class="close-contacts">
+      <a href="https://novartis.com/egypt" target="_blank">novartis.com/egypt</a>
+      <a href="#">@novartisegypt</a>
+      <span>Cairo, Egypt | Pharma Excellence</span>
+    </div>
+  </div>
+</section>
+
+<div class="footer-bar">
+  <span>Vantage Communications × Novartis Egypt</span>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
